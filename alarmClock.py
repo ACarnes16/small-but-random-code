@@ -7,7 +7,7 @@
 #imports
 import time 
 import os
-import datetime from datetime
+import datetime 
 
 class DataStorage:
     
@@ -19,7 +19,7 @@ class DataStorage:
 #empty box
 empty_box = " ______________________________________________________________\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|______________________________________________________________|"
 
-main_box = " ______________________________________________________________\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                          main box                            |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|______________________________________________________________|"
+main_box = " ______________________________________________________________\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|                                                              |\n|______________________________________________________________|"
 #plays "Hello Andrew" opening screen
 def openingScreen():
     # text blink function for startup 
