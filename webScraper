@@ -1,32 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-# set the target website
-url = 'https://www.calendar.com/'
+# Specify the URL
+url = 'https://calendar.com'
 
-# create a request object
-r = requests.get(url)
+# Make a GET request to fetch the raw HTML content
+html_content = requests.get('https://calendar.com').text
 
-# parse the HTML code
-soup = BeautifulSoup(r.text, 'html.parser')
+# Parse the html content
+soup = BeautifulSoup(html_content, "lxml")
 
-# extract the data
-data = soup.find_all('div', {'class': 'data'})
-
-# store the data
-file = open('data.csv', 'w', encoding="utf8")
-
-# loop through the data and write it to the CSV file
-for div in data:
-    file.write(div.text + '\n')
-
-# close the file
-file.close()
-
-# clean the data
-# you can use regular expressions or other methods
-# to clean the data here
-
-# print the result
-print('Data successfully scraped and stored!')
-print(r.status_code)
+# Get all the text from the page and save it to a .txt file
+with open('text_file.txt', 'w') as file:
+    text = soup.find_all(text=True)
+    for t in text:
+        file.write(t + '\n')
