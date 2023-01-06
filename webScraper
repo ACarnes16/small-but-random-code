@@ -1,0 +1,32 @@
+import requests
+from bs4 import BeautifulSoup
+
+# set the target website
+url = 'https://www.calendar.com/'
+
+# create a request object
+r = requests.get(url)
+
+# parse the HTML code
+soup = BeautifulSoup(r.text, 'html.parser')
+
+# extract the data
+data = soup.find_all('div', {'class': 'data'})
+
+# store the data
+file = open('data.csv', 'w', encoding="utf8")
+
+# loop through the data and write it to the CSV file
+for div in data:
+    file.write(div.text + '\n')
+
+# close the file
+file.close()
+
+# clean the data
+# you can use regular expressions or other methods
+# to clean the data here
+
+# print the result
+print('Data successfully scraped and stored!')
+print(r.status_code)

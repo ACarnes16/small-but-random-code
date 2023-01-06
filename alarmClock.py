@@ -1,12 +1,13 @@
 #toDO's:
 # 1. develop system so that any text can fit within the assigned box without messing up the box 
-# 2. yo
+# 2. 
 
 
 
 #imports
 import time 
 import os
+import datetime from datetime
 
 class DataStorage:
     
@@ -51,8 +52,9 @@ def mainScreen():
     print(main_box)
 
 
-
-
+def backEnd():
+    currentTime = datetime()
+    print(currentTime)
 
 
 #running sequence 
