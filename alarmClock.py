@@ -1,6 +1,7 @@
 #toDO's:
 # 1. develop system so that any text can fit within the assigned box without messing up the box 
-# 2. 
+# 2. yo
+
 
 
 #imports
@@ -12,8 +13,6 @@ class DataStorage:
     def __init__(self, time, input):
         self.time = time
         self.input= input
-
-
 
 
 #empty box
@@ -50,7 +49,11 @@ def openingScreen():
 def mainScreen():
     print("You have entered the main screen")
     print(main_box)
-    
+
+
+
+
+
 
 #running sequence 
 openingScreen()
